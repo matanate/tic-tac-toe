@@ -11,6 +11,16 @@ This is a simple command-line Tic-Tac-Toe game implemented in Python. The game a
 
 ## Game Controls
 - The game board is represented as follows:
+    a     b     c
+       |     |     
+ 1     |     |     
+  _____|_____|_____
+       |     |     
+ 2     |     |     
+  _____|_____|_____
+       |     |     
+ 3     |     |     
+       |     |     
 - Players enter their moves by providing the position (e.g., "a1", "b2").
 - After each game, you'll be prompted to restart or exit.
 

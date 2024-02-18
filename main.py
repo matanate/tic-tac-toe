@@ -1,3 +1,6 @@
+import os
+
+
 class GameBoard:
     # Class constants for player symbols
     PLAYER_X = "X"
@@ -23,6 +26,7 @@ class GameBoard:
         self.player = self.PLAYER_X
         self.game_on = True
         # Print the initial game board
+        self.clear_terminal()
         self.print_board()
 
     def print_board(self):
@@ -57,6 +61,7 @@ class GameBoard:
             # Remove the used position from the dictionary
             self.position_dict.pop(position)
             # Display the updated board, check for a win, and switch to the next player
+            self.clear_terminal()
             self.print_board()
             self.check_win()
             self.next_player()
@@ -125,6 +130,11 @@ class GameBoard:
         Restart the game by re-initializing the object.
         """
         self.__init__()
+
+    def clear_terminal(self):
+        """
+        Clears the terminal."""
+        os.system("cls" if os.name == "nt" else "clear")
 
 
 def main():

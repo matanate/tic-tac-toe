@@ -90,7 +90,7 @@ class GameBoard:
         for player in [self.PLAYER_X, self.PLAYER_O]:
             for sequence in (
                 self.game_board
-                + list(zip(*self.game_board))
+                + [list(tup) for tup in zip(*self.game_board)]
                 + [[self.game_board[i][i] for i in range(3)]]
                 + [[self.game_board[i][2 - i] for i in range(3)]]
             ):
